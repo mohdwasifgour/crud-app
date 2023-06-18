@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CRUD App</title>
+</head>
+<style>
+    body{
+    background-color: #0d3a8e;
+}
+body h1{
+    position: relative;
+    top: 20px;
+}
+    .container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        top: 20px;
+    }
+    
+    .container{
+        width: 410px;
+        height: 450px;
+        background-color: #224a92;
+        border-radius: 5px;
+        position: relative;
+        left: 450px;
+        box-shadow: inset 5px 5px 5px rgb(233, 228, 228), 5px 5px 5px rgb(227, 217, 217)
+    }
+    .box{
+        display: flex;
+        position: relative;
+        top: 20px;
+    }
+    h1{
+        margin-left: 19px;
+    }
+    #input,#input1 {
+        width: 170px;
+        height: 28px;
+        margin: 5px;
+        overflow: hidden;
+    font-size: 15px;
+    border-bottom: 3px solid #ff6768;
+    outline: none;
+    background: none;
+    }
+    input{
+    border: none;
+
+    }
+    #result{
+        font-size: 26px;
+        position: relative;
+        top: 30px;
+        left: 70px;
+    }
+    #result1{
+        font-size: 26px;
+        position: relative;
+        left: 170px;
+    }
+     #btn #btn1{
+        position: relative;
+        left: -8px;
+        top: -8px;
+        cursor: pointer;
+    }
+    i{
+        position: relative;
+        left: 360px;
+        top: 5px;
+        margin: 2px;
+    }
+    .btn i{
+        position: relative;
+        left: -1px;
+        top: 10px;
+    }
+    i:hover{
+    color: #4a83b6;
+
+    background: #ff6768;
+    transition: all 0.4s ease 0s;
+    cursor: pointer;
+}
+
+    
+</style>
+<body>
+    <div  class="container">
+        <h1></h1>
+        <h1 style="margin-left: 50px; margin-top: 50px;">  CRUD App JavaScript</h1>
+        <div class="container1">
+    <input type="text" name="text" id="input" onclick="clickBtn()" placeholder="Enter the name...">
+    <input type="text" name="text" id="input1" onclick="clickBtn()" placeholder="Enter the gmail...">
+    <div class="btn"><i onclick="clickBtn()" class="fa-solid fa-circle-plus fa-flip-both fa-2xl"></i><br><br></div></div>
+   <span class="box"> <h1>Id</h1><h1>Name</h1><h1>gmail</h1></span>
+    <div id="result"></div><div id="result1"></div><i id="btn" class="fa-solid fa-pen-to-square" class="icon" onclick="update()"></i><i id="btn1" class="fa-solid fa-trash-can" onclick="delate()" class="icon"></i>
+    <div id="delateResult"></div>
+</div>
+</body>
+<script>
+    let clickBtn=()=>{
+        let user=document.getElementById("input").value;
+        let user1=document.getElementById("input1").value;
+    document.getElementById("result").innerHTML=user;
+    document.getElementById("result1").innerHTML=user1;
+    }
+     btn.addEventListener("click",clickBtn);
+     
+     let delate=()=>{
+        let userDelate=document.getElementById("result");
+        let userDelateS=document.getElementById("result1");
+         userDelate.remove();
+         userDelateS.remove();
+         let userDelate1=document.getElementById("input").value="";
+         let userDelate2=document.getElementById("input1").value="";
+     }
+     let update=()=>{
+
+     }
+    //  setTimeout(() => {
+    //     let array;
+    //     for (let index = 0; index <10; index++) {
+    //  console.log(index);
+    //  document.write(index);
+    //     }    
+    // },1000);
+</script>
+</html>
